@@ -1,0 +1,47 @@
+NAME
+    DNS::Singleton - gives a singleton DNS object
+
+SYNOPSIS
+        use DNS::Singleton;
+        my $dns = DNS::Singleton->instance;
+
+        my $host = $dns->host('150.203.115.7');
+
+DESCRIPTION
+    The DNS::Singleton module provides a unique cached DNS lookup object
+    for all its instances within an application.
+
+METHODS
+    my $dns = DNS::Singleton->instance()
+        Creates a new DNS singleton object.
+
+    my $host = $dns->host()
+        Returns the hostname for the given IP or vice versa.
+
+FILES
+        /var/dns-cache
+
+AUTHOR
+    Iain Truskett <spoon@cpan.org> <http://eh.org/~koschei/>
+
+    Please report any bugs, or post any suggestions, to either the
+    mailing list at <cpan@dellah.anu.edu.au> (email
+    <cpan-subscribe@dellah.anu.edu.au> to subscribe) or directly to the
+    author at <spoon@cpan.org>
+
+PLANS
+    Tied interface.
+
+COPYRIGHT
+    Copyright (c) 2002 Iain Truskett. All rights reserved. This program
+    is free software; you can redistribute it and/or modify it under the
+    same terms as Perl itself.
+
+        $Id: Singleton.pm,v 1.1.1.1 2002/03/06 06:40:43 koschei Exp $
+
+ACKNOWLEDGEMENTS
+    None really. Just happened to need the facilities of this module.
+
+SEE ALSO
+    Tie::DNS, Class::Singleton, Memoize, Storable
+
